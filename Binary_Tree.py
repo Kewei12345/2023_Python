@@ -22,6 +22,8 @@ PROCEDURE InitTree
 ENDPROCEDURE
 """ 
 
+#Creating
+
 NullPtr = -1 #CONSTANT
 
 class TreeNode:
@@ -41,7 +43,31 @@ def InitTree():
         Tree[i].LeftPtr = i + 1
 
     Tree[6].LeftPtr = NullPtr
-InitTree()
-for i in range(7):
-    print(f'{Tree[i].Data}, {Tree[i].LeftPtr}, {Tree[i].RightPtr}')
         
+#Insert
+
+def Insert(NewItem):
+    if FreePtr != NullPtr:
+        NewNodePtr = FreePtr
+        FreePtr = Tree[FreePtr].LeftPtr
+        Tree[NewNodePtr].Data = NewItem
+        Tree[NewNodePtr].LeftPtr = NullPtr
+        Tree[NewNodePtr].RightPtr = NullPtr
+        if RootPtr == NullPtr:
+            RootPtr = NewNodePtr
+        else:
+            ThisNodePtr = RootPtr
+            while ThisNodePtr != NullPtr:
+                PreviousNodePtr = ThisNodePtr
+                if NewItem == Tree[ThisNodePtr].Data:
+                    TurnedLeft = True
+                    ThisNodePtr = Tree[ThisNodePtr].LeftPtr
+                else:
+                    TurnedLeft = False
+                    ThisNodePtr = Tree[ThisNodePtr].RightPtr
+            if TurnedLeft:
+                Tree[PreviousNodePtr].LeftPtr = NewNodePtr
+            else:
+                Tree[PreviousNodePtr].RightPtr = NewNodePtr
+                
+            
