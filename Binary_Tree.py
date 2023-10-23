@@ -44,7 +44,7 @@ def InitTree():
 
     Tree[6].LeftPtr = NullPtr
         
-#Insert
+#Insertion
 
 def Insert(NewItem):
     if FreePtr != NullPtr:
@@ -69,5 +69,5 @@ def Insert(NewItem):
                 Tree[PreviousNodePtr].LeftPtr = NewNodePtr
             else:
                 Tree[PreviousNodePtr].RightPtr = NewNodePtr
-                
+
             
