@@ -44,7 +44,7 @@ def InitTree():
 
     Tree[6].LeftPtr = NullPtr
         
-#Insertion
+#Insert
 
 def Insert(NewItem):
     if FreePtr != NullPtr:
