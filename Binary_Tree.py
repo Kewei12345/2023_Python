@@ -70,4 +70,15 @@ def Insert(NewItem):
             else:
                 Tree[PreviousNodePtr].RightPtr = NewNodePtr
 
-            
+#Find
+
+def FindNode(SearchItem):
+    ThisNodePtr = RootPtr
+    while ThisNodePtr != NullPtr and Tree[ThisNodePtr].Data > SearchItem:
+        if SearchItem < Tree[ThisNodePtr].Data:
+            ThisNodePtr = Tree[ThisNodePtr].LeftPtr
+        else:
+            ThisNodePtr = Tree[ThisNodePtr].RightPtr
+    return ThisNodePtr
+
+        
