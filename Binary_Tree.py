@@ -47,6 +47,7 @@ def InitTree():
 #Insert
 
 def Insert(NewItem):
+    global RootPtr, FreePtr
     if FreePtr != NullPtr:
         NewNodePtr = FreePtr
         FreePtr = Tree[FreePtr].LeftPtr
@@ -72,7 +73,7 @@ def Insert(NewItem):
 
 #Find
 
-def FindNode(SearchItem):
+def Find(SearchItem):
     ThisNodePtr = RootPtr
     while ThisNodePtr != NullPtr and Tree[ThisNodePtr].Data > SearchItem:
         if SearchItem < Tree[ThisNodePtr].Data:
@@ -81,4 +82,6 @@ def FindNode(SearchItem):
             ThisNodePtr = Tree[ThisNodePtr].RightPtr
     return ThisNodePtr
 
+Insert(23)
+Find(43)
         
