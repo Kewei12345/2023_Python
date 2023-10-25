@@ -81,7 +81,3 @@ def Find(SearchItem):
         else:
             ThisNodePtr = Tree[ThisNodePtr].RightPtr
     return ThisNodePtr
-
-Insert(23)
-Find(43)
-        
