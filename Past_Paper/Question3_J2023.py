@@ -1,7 +1,5 @@
-
-
-Animal = [""]*20
-Colour = [""]*20
+Animal = []
+Colour = []
 global AnimalTopPointer
 global ColourTopPointer
 AnimalTopPointer = 0
@@ -74,11 +72,21 @@ def OutputItem():
     ColourPoped = PopColour()
     if ColourPoped == "":
         print("No colour")
-        PushAnimal[AnimalPoped]
+        PushAnimal(AnimalPoped)
     else:
         if AnimalPoped == "":
             print("No Animal")
             PushColour(ColourPoped)
         else:
-            print(ColourPoped, AnimalPoped)
+            ColourPoped = ColourPoped.strip("\n")
+            AnimalPoped = AnimalPoped.strip("\n")
+            print(f"{ColourPoped} {AnimalPoped}")
 
+def main():
+    global AnimalTopPointer
+    global ColourTopPointer
+    ReadData()
+    for _ in range(4):
+        OutputItem()
+
+main()
