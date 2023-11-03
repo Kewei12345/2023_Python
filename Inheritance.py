@@ -17,7 +17,6 @@ class LibraryItem:
         print(f"Reference Number: {self.ReferenceNum}") 
         print(f"Load: {self.Loan}")
         print(f"Date: {self.Date}")
-        print("———————————————————————————————————")
 
 #Child Book of Parent LibraryItem
 class Book(LibraryItem):
@@ -48,9 +47,9 @@ class CD(LibraryItem):
     
 
 
-bookmine = Book("giaw", "seecas", 132, True)
-song = CD("hehe", "gaga", 6969, False, "Pop")
+MyBook = Book("BookNameHere", "AuthorNameHere", 132, True)
+MyCD = CD("RandomCD", "KeweiChen", 6969, False, "Pop")
 
 
-bookmine.Output()
-song.Output()
+MyBook.Output()
+MyCD.Output()
