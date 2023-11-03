@@ -12,20 +12,11 @@ class LibraryItem:
 
     def Output(self):
         print("———————————————————————————————————")
-        print(self.Title)
-        print(self.Author) 
-        print(self.ReferenceNum) 
-        print(self.Loan)
-        print(self.Date)
-        try:
-            print(self.Requested)
-        except AttributeError:
-            pass
-        try:
-            print(self.Genre)
-        except AttributeError:
-            pass
-        print("———————————————————————————————————")
+        print(f"Title: {self.Title}")
+        print(f"Author: {self.Author}") 
+        print(f"Reference Number: {self.ReferenceNum}") 
+        print(f"Load: {self.Loan}")
+        print(f"Date: {self.Date}")
 
 
 #Child Book of Parent LibraryItem
@@ -36,6 +27,12 @@ class Book(LibraryItem):
         if Loan:
             self.Requested = True
 
+    def Output(self):
+        super().Output()
+
+        print(f"Requested: {self.Requested}")
+
+
 
 #Child CD of Parent LibraryItem
 class CD(LibraryItem):
@@ -43,6 +40,12 @@ class CD(LibraryItem):
     def __init__(self, Title, Author, ReferenceNum, Loan, Genre):
         super().__init__(Title, Author, ReferenceNum, Loan)
         self.Genre = Genre
+
+    def Output(self):
+        super().Output()
+
+        print(f"Genre: {self.Genre}")
+    
 
 
 bookmine = Book("giaw", "seecas", 132, True)
