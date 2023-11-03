@@ -17,7 +17,7 @@ class LibraryItem:
         print(f"Reference Number: {self.ReferenceNum}") 
         print(f"Load: {self.Loan}")
         print(f"Date: {self.Date}")
-
+        print("———————————————————————————————————")
 
 #Child Book of Parent LibraryItem
 class Book(LibraryItem):
