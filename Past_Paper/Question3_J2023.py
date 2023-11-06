@@ -6,8 +6,6 @@ AnimalTopPointer = 0
 ColourTopPointer = 0
 
 
-
-
 def PushAnimal(DataToPush):
     global AnimalTopPointer
     global ColourTopPointer
@@ -83,8 +81,6 @@ def OutputItem():
             print(f"{ColourPoped} {AnimalPoped}")
 
 def main():
-    global AnimalTopPointer
-    global ColourTopPointer
     ReadData()
     for _ in range(4):
         OutputItem()
