@@ -41,8 +41,6 @@ def readData():
         print("File not found") 
     
 
-
-
 #main
 readData()
 QNum = int(input("Number between 1 and 5: "))
