@@ -29,7 +29,7 @@ def AmendHighScores(Name, Score):
 
 
 def WriteTopTen():
-    with open("NewHighScore", "w") as NewFile:
+    with open("NewHighScore.txt", "w") as NewFile:
         for n in range(10):
             NewFile.write(f"{PlayerScores[n][0]}\n")
             NewFile.write(f"{PlayerScores[n][1]}\n")
