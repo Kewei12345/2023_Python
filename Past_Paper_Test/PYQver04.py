@@ -46,4 +46,12 @@ def readData():
 #main
 readData()
 QNum = int(input("Number between 1 and 5: "))
+print(arrayTreasure[QNum - 1].getQuestion())
+Correct = False
+Attempt = 0
+while not Correct:
+    UserAns = int(input("Your answer: "))
+    Correct = arrayTreasure[QNum - 1].checkAnswer(UserAns)
+    Attempt += 1
+print(f"Points awarded: {arrayTreasure[QNum - 1].getPoints(Attempt)}")
 
