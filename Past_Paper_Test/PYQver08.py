@@ -21,3 +21,4 @@ def RecursiveVowels(Value):
             return RecursiveVowels(WithoutFirst)
 
 print(IteractiveVowels("house"))
+print(RecursiveVowels("imagine"))
