@@ -16,7 +16,7 @@ def IterativeUnknown(x, y):
     while x != y:
         print(x + y)
         if x < y:
-            Power *= 2
+            Power *= 2  
             x += 1
 
         else:
